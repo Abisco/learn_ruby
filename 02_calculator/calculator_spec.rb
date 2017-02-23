@@ -77,12 +77,19 @@ end
 # once the above tests pass,
 # write tests and code for the following:
 
-describe "#multiply" do
+describe "multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies an empty array" do
+    expect(multiply([])).to eq(0)
+  end
+  it "multiplies two numbers" do
+    expect(multiply([2, 5])).to eq(10)
+  end
 
-  it "multiplies several numbers"
-  
+  it "multiplies several numbers" do
+    expect(multiply([2, 5, 10])).to eq(100)
+  end
+
 end
 
 describe "#power" do
